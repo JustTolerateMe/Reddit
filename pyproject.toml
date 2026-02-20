@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reddit-social-listening"
+version = "0.1.0"
+description = "Starter social listening pipeline for Reddit data collection and analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+  "pandas>=2.0.0",
+  "textblob>=0.17.1",
+  "tqdm>=4.66.0",
+]
+
+[project.scripts]
+reddit-social-listening = "reddit_social_listening.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
